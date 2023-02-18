@@ -1,6 +1,11 @@
 ## Description
 
-Next.js that provides API with array of objects which is fetched in index.js and displayed 
+Next.js project
+Provides Webserver API
+So far ... :
+- HTTP GET in Home
+- HTTP POST in POST page
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
