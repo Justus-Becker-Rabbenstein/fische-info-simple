@@ -1,15 +1,4 @@
 const Post = () => {
-
-    var jsonData =
-        [
-            {
-                "name": "alan",
-                "gattung": 23,
-                "wasser": "aturing",
-                "pictureurl": "..."
-            }
-        ]
-
     return (
         <div>
             <h1>POST</h1>
