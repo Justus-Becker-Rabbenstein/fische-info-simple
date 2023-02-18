@@ -2,13 +2,16 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
+  // GET REQUEST USE STATE
   const [apiData, setApiData] = useState([]);
 
+  // FETCH DATA WITH HTTP GET
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("/api/apiFische");
@@ -17,6 +20,8 @@ export default function Home() {
     }
     fetchData();
   }, []);
+
+
 
   return (
     <>
@@ -27,14 +32,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+      <button onClick={() => console.log(apiData)}>getApiData</button>
         <div className={styles.description}>
-          <button onClick={() => console.log(apiData)}>apiData</button>
+          <h1>GET REQUEST</h1>
           {apiData.map((singleApiEntry) =>
-            <div key={singleApiEntry.id}>
+            <div key={singleApiEntry.name}>
               <p>Fisch Name:{singleApiEntry.name}</p>
               <p>Fisch Gattung: {singleApiEntry.gattung}</p>
               <p>Wasserart: {singleApiEntry.wasser}</p>
-              <p>{singleApiEntry.pictureurl}</p>
               <img src={singleApiEntry.pictureurl} alt={singleApiEntry.name} height="150" width="150" />
             </div>
           )}
