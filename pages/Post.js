@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 const Post = () => {
 
     var jsonData =
@@ -17,13 +15,13 @@ const Post = () => {
             <h1>POST</h1>
             <form action="/api/apiFische" method="post">
                 <label>Fisch Name: </label>
-                <input></input>
+                <input name="name" />
                 <label>Fisch Gattung: </label>
-                <input></input>
+                <input name="fischGattung" />
                 <label>Wasserart: </label>
-                <input></input>
+                <input name="wasserart" />
                 <label>Bildurl: </label>
-                <input></input>
+                <input name="pictureUrl" />
                 <button type="submit">Submit data</button>
             </form>
         </div>

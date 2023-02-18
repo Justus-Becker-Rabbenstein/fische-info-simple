@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-const arrayOfObjects = [{
+let arrayOfObjects = [{
   name: "Lachs",
   gattung: "Salmo",
   wasser: "Süßwasserfisch",
@@ -23,6 +23,8 @@ const arrayOfObjects = [{
 export default function handler(req, res) {
   if (req.method === 'GET') {
     res.status(200).json(arrayOfObjects)
+  } else if (req.method === 'POST') {
+    arrayOfObjects.push(req.body)
   } else {
     res.status(404).json("broken")
   }
