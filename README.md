@@ -1,3 +1,6 @@
+# Tech Stack
+Next.js, React (HTML, styled-components, JavaScript)
+
 ## Description
 
 This Next.js project provides a webserver API with an array of objects. In the client side this API data is fetched and displayed (HTTP GET). In the POST page you can add new entries to this array. So far implemented:
